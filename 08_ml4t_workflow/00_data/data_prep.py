@@ -11,9 +11,7 @@ pd.set_option('display.expand_frame_repr', False)
 np.random.seed(42)
 
 PROJECT_DIR = Path('..', '..')
-
-DATA_DIR = PROJECT_DIR / 'data'
-
+DATA_DIR = Path('/media/n1c0/SanDiskSSD') #PROJECT_DIR / 'data'
 
 def get_backtest_data(predictions='lasso/predictions'):
     """Combine chapter 7 lr/lasso/ridge regression predictions

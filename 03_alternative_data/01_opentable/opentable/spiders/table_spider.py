@@ -21,7 +21,7 @@ class OpenTableSpider(Spider):
 
     def parse(self, response):
         item = OpentableItem()
-        for resto in response.css('div.rest-row-info'):
+        for resto in response.css('div.rest-row-info'):#response.css('div.rest-row-info'):
             item['name'] = resto.css('span.rest-row-name-text::text').extract()
             item['bookings'] = resto.css('div.booking::text').re(r'\d+')
             item['rating'] = resto.css('div.all-stars::attr(style)').re_first('\d+')
