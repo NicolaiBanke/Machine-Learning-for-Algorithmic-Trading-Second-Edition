@@ -7,10 +7,7 @@ from stooq_jp_stocks import stooq_jp_to_bundle
 from datetime import time
 from pytz import timezone
 
-
 register('stooq',
          stooq_jp_to_bundle(),
          calendar_name='XTKS',
          )
-
-

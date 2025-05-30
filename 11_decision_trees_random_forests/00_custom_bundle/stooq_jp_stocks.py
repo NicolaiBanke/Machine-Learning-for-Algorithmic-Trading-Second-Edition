@@ -17,14 +17,12 @@ try:
     zipline_root = os.environ['ZIPLINE_ROOT']
 except KeyError:
     print('Please ensure a ZIPLINE_ROOT environment variable is defined and accessible '
-          '(or alter the script and manually set the path')
+          '(or alter the script and manually set the path)')
     exit()
 
 custom_data_path = Path(zipline_root, 'custom_data')
 
-# custom_data_path = Path('~/.zipline/custom_data').expanduser()
-
-
+#custom_data_path = Path('~/.zipline/custom_data').expanduser()
 def load_equities():
     return pd.read_hdf(custom_data_path / 'stooq.h5', 'jp/equities')
 
